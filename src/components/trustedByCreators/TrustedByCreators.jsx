@@ -127,7 +127,7 @@ const TrustedByCreators = () => {
   const doubledTestimonials = [...testimonials, ...testimonials]
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-20 ">
+    <div className=" py-20 ">
       <style jsx>{`
         @keyframes scroll {
           0% {
@@ -155,7 +155,6 @@ const TrustedByCreators = () => {
           <h3 className="text-5xl font-bold text-gray-900 mb-6">
             Hear Their Stories
           </h3>
-          {/* <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div> */}
         </div>
 
         <div

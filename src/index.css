@@ -11,12 +11,13 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   overflow-y: scroll;
-  background-color: white !important;
+  background: linear-gradient(268deg, #327CFE -439.93%, #FFF 81.8%) !important;
 }
 
 .font-poppins {
   font-family: 'Poppins', sans-serif !important;
 }
+
 .font-roboto {
   font-family: 'Roboto', sans-serif !important;
 }
@@ -119,3 +120,7 @@ body {
   white-space: nowrap;
   animation: marquee 100s linear infinite;
 }
+
+
+/* border color for subscription */
+

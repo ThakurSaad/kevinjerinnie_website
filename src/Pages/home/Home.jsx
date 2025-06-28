@@ -7,6 +7,7 @@ import ForAnyoneWithAStory from '../../components/home/ForAnyoneWithAStory'
 import UnlockYourCreative from '../../components/home/UnlockYourCreative'
 import TrustedByCreators from '../../components/trustedByCreators/TrustedByCreators'
 import SubscriptionPlan from '../../components/subscriptionPlan/SubscriptionPlan'
+import WEBAIMobileApp from '../../components/WEBAIMobileApp/WEBAIMobileApp'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <UnlockYourCreative />
       <TrustedByCreators />
       <SubscriptionPlan />
+      <WEBAIMobileApp />
     </div>
   )
 }

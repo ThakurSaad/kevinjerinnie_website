@@ -224,39 +224,76 @@ const SubscriptionPlan = () => {
       <div className="text-4xl md:text-5xl font-bold  mb-4">
         Subscription Plans
       </div>
-      <div className="text-lg mb-12 max-w-2xl mx-auto">
+      <div className="text-lg mb-12 text-[#4F4F59] font-bold mx-auto">
         Choose the perfect plan to start creating stunning AI-powered videos
         with 247web.ai
       </div>
 
-      {/* Tab Switcher */}
-      <div className="flex justify-center mb-12 ">
-        <div className="inline-flex  rounded-full p-1 shadow-lg bg-[#F1F1F2]">
+      <div className="flex justify-center mb-12 p-8">
+        <div className="inline-flex rounded-full p-1 shadow-lg bg-[#F1F1F2]">
           <button
             onClick={() => setActiveTab('monthly')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-              activeTab === 'monthly' ? ' shadow-md' : ''
+            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 relative ${
+              activeTab === 'monthly'
+                ? 'bg-white border-2 '
+                : 'hover:bg-gray-50'
             }`}
           >
             Monthly
           </button>
+
           <button
             onClick={() => setActiveTab('yearly')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
+            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 relative ${
               activeTab === 'yearly'
-                ? 'bg-white text-gray-900 shadow-md'
-                : 'text-gray-600 hover:text-gray-900'
+                ? 'bg-white text-gray-900 border-2 rainbow-border-animation'
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
             }`}
           >
             Yearly
-            <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
+            <span className="bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded-full">
               20% off
             </span>
           </button>
         </div>
+
+        {/* Demo content */}
+
+        <style jsx>{`
+          @keyframes rainbow-border {
+            0% {
+              border-color: #ef4444;
+            }
+            14% {
+              border-color: #f97316;
+            }
+            28% {
+              border-color: #eab308;
+            }
+            42% {
+              border-color: #22c55e;
+            }
+            56% {
+              border-color: #06b6d4;
+            }
+            70% {
+              border-color: #3b82f6;
+            }
+            84% {
+              border-color: #8b5cf6;
+            }
+            100% {
+              border-color: #ef4444;
+            }
+          }
+
+          .rainbow-border-animation {
+            animation: rainbow-border 2s linear infinite;
+            border-style: solid;
+          }
+        `}</style>
       </div>
 
-      {/* Plans Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ]">
         {currentPlans.map((plan, index) => (
           <div
@@ -268,10 +305,9 @@ const SubscriptionPlan = () => {
             }`}
           >
             <div className="text-left  flex flex-col h-full">
-              {/* Header */}
               <div
                 className={`mb-6 ${
-                  activeTab === 'yearly' ? 'max-h-[200px]' : 'h-[230px] '
+                  activeTab === 'yearly' ? 'h-[170px]' : 'h-[230px] '
                 } bg-white px-5 py-10 flex flex-col `}
               >
                 <h3 className="text-2xl font-bold  mb-5">{plan.name}</h3>
@@ -286,17 +322,18 @@ const SubscriptionPlan = () => {
                 )}
               </div>
 
-              {/* Features */}
               <div className="space-y-3 mb-8 flex-grow px-5">
                 {plan.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div
+                    key={featureIndex}
+                    className="flex items-start gap-3 font-semibold"
+                  >
+                    <Check className="w-5 h-5 text-blue-600 font-bold mt-0.5 flex-shrink-0" />
                     <span className="text-sm ">{feature}</span>
                   </div>
                 ))}
               </div>
 
-              {/* Button */}
               <button
                 className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                   plan.highlight

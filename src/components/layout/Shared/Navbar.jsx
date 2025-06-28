@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className="hidden lg:flex gap-7 items-center">
           <Link
             to={'/signup'}
-            className="border border-[#1AC5FE]  hover:text-[#1AC5FE] text-white rounded-md py-2 px-7"
+            className="border border-[#1AC5FE]   hover:text-[#1AC5FE] text-white rounded-md py-2 px-7"
           >
             Sign Up
           </Link>

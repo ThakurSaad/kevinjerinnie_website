@@ -7,7 +7,7 @@ const Features = () => {
       content: (
         <Link to="/signup">
           <div>
-            <span className="text-semibold border-2 border-[#1AC5FE] px-6 py-3 font-roboto rounded-md bg-white text-black mb-4">
+            <span className="text-semibold border border-[#1AC5FE] text-[#1AC5FE]  px-6 py-3 font-roboto rounded-md bg-white font-bold mb-4">
               Sign Up
             </span>
           </div>
@@ -19,7 +19,7 @@ const Features = () => {
       content: (
         <Link to="/login">
           <div>
-            <span className="text-semibold   bg-[#1AC5FE] px-6 py-3 font-roboto rounded-md bg-white text-black mb-4">
+            <span className="text-semibold   bg-[#1AC5FE] px-6 py-3 font-roboto rounded-md  text-black mb-4">
               Sign In
             </span>
           </div>

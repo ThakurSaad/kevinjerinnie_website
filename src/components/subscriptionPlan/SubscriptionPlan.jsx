@@ -224,7 +224,7 @@ const SubscriptionPlan = () => {
       <div className="text-4xl md:text-5xl font-bold  mb-4">
         Subscription Plans
       </div>
-      <div className="text-lg mb-12 text-[#4F4F59] font-bold mx-auto">
+      <div className="text-lg mb-12 text-[#4F4F59]  mx-auto">
         Choose the perfect plan to start creating stunning AI-powered videos
         with 247web.ai
       </div>

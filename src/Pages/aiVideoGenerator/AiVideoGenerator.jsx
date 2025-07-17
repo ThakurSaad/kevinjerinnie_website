@@ -1,3 +1,4 @@
+import CreateViralVideos from '../../components/home/CreateViralVideos'
 import NextLevel from '../../components/scriptToVideo/NextLevel'
 import ScriptToVideoHeroSection from '../../components/scriptToVideo/ScriptToVideoHeroSection'
 import TryOutOur from '../../components/scriptToVideo/TryOutOur'
@@ -5,10 +6,10 @@ import WhyChoose from '../../components/scriptToVideo/WhyChoose'
 import TrustedByCreators from '../../components/trustedByCreators/TrustedByCreators'
 import WantToKnowMore from '../../components/wantToKnowMore/WantToKnowMore'
 
-const ScriptToVideo = () => {
+const AiVideoGenerator = () => {
   return (
     <div>
-      <ScriptToVideoHeroSection />
+       <ScriptToVideoHeroSection />
       <WhyChoose />
       <NextLevel />
       <TrustedByCreators />
@@ -18,4 +19,4 @@ const ScriptToVideo = () => {
   )
 }
 
-export default ScriptToVideo
+export default AiVideoGenerator     

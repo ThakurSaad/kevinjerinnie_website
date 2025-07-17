@@ -38,16 +38,16 @@ const TryOutOur = () => {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#DFEBFF] overflow-hidden">
+    <div className="relative  bg-[#DFEBFF] overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-slate-900/40 to-slate-900"></div>
+      <div className="absolute inset-0 bg-"></div>
       
       {/* Floating Particles */}
       <div className="absolute inset-0 pointer-events-none">
         {particles.map((particle) => (
           <div
             key={particle.id}
-            className="absolute rounded-full bg-gradient-to-r from-blue-400 to-purple-400 opacity-20 animate-pulse"
+            className="absolute rounded-full  "
             style={{
               left: `${particle.x}%`,
               top: `${particle.y}%`,
@@ -62,17 +62,12 @@ const TryOutOur = () => {
 
       {/* Grid Pattern Overlay */}
 
-      <div className="relative z-10 flex min-h-screen">
+      <div className="relative z-10 flex ">
         {/* Left Section - AI Video Generator */}
         <section className="relative w-1/2 flex items-center justify-center p-8 overflow-hidden">
-          {/* Glassmorphism Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/60 to-black/80 backdrop-blur-sm"></div>
           
-          {/* Animated Border */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-20 animate-pulse"></div>
-          <div className="absolute inset-[2px] bg-gradient-to-br from-black/80 to-black/90 backdrop-blur-lg"></div>
           
-          <div className="relative z-10 w-full max-w-lg space-y-8">
+          <div className="relative z-10 w-full max-w-lg space-y-8 bg-green-200">
             {/* Header with Icons */}
             <div className="text-center space-y-4">
               <div className="flex justify-center items-center gap-3 mb-4">
@@ -157,7 +152,7 @@ const TryOutOur = () => {
             {/* Main Card */}
             <div className="relative group">
               {/* Animated Glow Effect */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 animate-pulse"></div>
+              <div className="absolute -inset-2  rounded-3xl blur-lg opacity-30 group-hover:opacity-50 animate-pulse"></div>
               
               {/* Card Content */}
               <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl p-8 rounded-3xl border border-white/20 shadow-2xl">

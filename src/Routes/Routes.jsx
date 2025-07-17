@@ -4,6 +4,7 @@ import ErrorBoundary from '../errorBoundary/ErrorBoundary'
 import Website from '../components/layout/Website'
 import Pricing from '../Pages/pricing/Pricing'
 import ScriptToVideo from '../Pages/scriptToVideo/ScriptToVideo'
+import AiVideoGenerator from '../Pages/aiVideoGenerator/AiVideoGenerator'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/script-to-Video',
         element: <ScriptToVideo />,
+      },
+      {
+        path: '/ai-video-generator',
+        element: <AiVideoGenerator />,
       },
     ],
   },

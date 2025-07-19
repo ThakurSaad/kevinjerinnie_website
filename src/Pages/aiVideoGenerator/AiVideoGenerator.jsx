@@ -10,13 +10,16 @@ const AiVideoGenerator = () => {
   return (
     <div>
        <ScriptToVideoHeroSection />
-      <WhyChoose />
+      {/* <WhyChoose />
       <NextLevel />
-      <TrustedByCreators />
+      <TrustedByCreators /> */}
       {/* <TryOutOur /> */}
-      <WantToKnowMore />
+      {/* <WantToKnowMore /> */}
     </div>
   )
 }
 
 export default AiVideoGenerator     
+
+
+

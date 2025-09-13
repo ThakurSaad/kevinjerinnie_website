@@ -6,6 +6,9 @@ import Pricing from "../Pages/pricing/Pricing";
 import ScriptToVideo from "../Pages/scriptToVideo/ScriptToVideo";
 import AiVideoGenerator from "../Pages/aiVideoGenerator/AiVideoGenerator";
 import AiVideoClip from "../Pages/aiVideoClip/aiVideoClip";
+import AIImageGenerator from "../Pages/aiImageGenerator/AIImageGenerator";
+import TextToVideo from "../Pages/textToVideo/TextToVideo";
+import AutoCaption from "../Pages/autoCaption/AutoCaption";
 
 const router = createBrowserRouter([
   {
@@ -21,9 +24,13 @@ const router = createBrowserRouter([
         path: "/pricing",
         element: <Pricing />,
       },
-        {
+      {
         path: "/ai-video-clip",
-        element: <AiVideoClip/>,
+        element: <AiVideoClip />,
+      },
+      {
+        path: "/ai-image-generator",
+        element: <AIImageGenerator />,
       },
       {
         path: "/script-to-Video",
@@ -32,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: "/ai-video-generator",
         element: <AiVideoGenerator />,
+      },
+      {
+        path: "/text-to-video",
+        element: <TextToVideo />,
+      },
+      {
+        path: "/auto-caption-and-hashtags",
+        element: <AutoCaption />,
       },
     ],
   },

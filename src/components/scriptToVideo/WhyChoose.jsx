@@ -23,13 +23,13 @@ const items = [
 
 const WhyChoose = () => {
   return (
-    <div className="responsive-base-width mt-32">
+    <div className="mt-32 responsive-base-width">
       <div className="text-5xl font-bold text-center max-w-[800px] mx-auto">
         Why Choose <span className="text-[#327CFE]">247WEB.AI</span> Script to
         Video AI Generator?
       </div>
       <div className="mt-10">
-        <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+        <Tabs defaultActiveKey="1" items={items} onChange={onChange}  />
       </div>
     </div>
   )

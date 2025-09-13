@@ -175,18 +175,18 @@ const Features = () => {
     <div className="flex flex-col p-4 rounded-lg min-w-[500px]">
       <section className="flex flex-col">
         <div>
-          <Link to="/" className="font-bold font-roboto text-2xl">
+          <Link to="/" className="text-2xl font-bold font-roboto">
             247WEB.AI
           </Link>
         </div>
-        <div className="border-r mt-5 pr-4 gap-2  flex items-center justify-start">
+        <div className="flex items-center justify-start gap-2 pr-4 mt-5 border-r">
           {leftPartItems.map((item) => (
             <div key={item.key}>{item.content}</div>
           ))}
         </div>
       </section>
 
-      <div className=" mt-5">
+      <div className="mt-5 ">
         <div className="grid grid-cols-2 ">
           {rightPartItems.map((item, index) => (
             <div key={`${item.key}-${index}`}>{item.content}</div>

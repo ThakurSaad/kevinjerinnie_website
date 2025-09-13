@@ -15,7 +15,7 @@ const NextLevel = () => {
   const [ref5, inView5] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <div className="text-center responsive-base-width mt-44">
+    <div className="text-center responsive-base-width ">
       <div className="text-5xl font-bold">
         Next-Level Ideas, Just a{' '}
         <div className="text-[#327CFE]"> Click Away.</div>
@@ -29,13 +29,13 @@ const NextLevel = () => {
             background:
               'linear-gradient(148deg, rgba(50, 124, 254, 0.60) 28.69%, rgba(255, 255, 255, 0.60) 111.89%)',
           }}
-          className="flex justify-between px-5 rounded-2xl py-4 gap-5 "
+          className="flex justify-between gap-5 px-5 py-4 rounded-2xl "
         >
           <motion.div
             initial={{ opacity: 0, x: -200 }}
             animate={inView1 ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="flex flex-col text-left justify-center gap-5 w-1/3 "
+            className="flex flex-col justify-center w-1/3 gap-5 text-left "
           >
             <div className="text-4xl font-bold">
               Got a Script? We’ll Build the Movie
@@ -76,7 +76,7 @@ const NextLevel = () => {
             background:
               'linear-gradient(148deg, rgba(50, 124, 254, 0.60) 28.69%, rgba(255, 255, 255, 0.60) 111.89%)',
           }}
-          className="flex mt-10 justify-between px-5 rounded-2xl py-4 gap-5 "
+          className="flex justify-between gap-5 px-5 py-4 mt-10 rounded-2xl "
         >
           <motion.div
             initial={{ opacity: 0, x: -200 }}
@@ -97,7 +97,7 @@ const NextLevel = () => {
             initial={{ opacity: 0, x: 200 }}
             animate={inView2 ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="flex flex-col text-left justify-center gap-5 w-1/3"
+            className="flex flex-col justify-center w-1/3 gap-5 text-left"
           >
             <div className="text-4xl font-bold">
               From Text to Motion Picture
@@ -122,13 +122,13 @@ const NextLevel = () => {
             background:
               'linear-gradient(148deg, rgba(50, 124, 254, 0.60) 28.69%, rgba(255, 255, 255, 0.60) 111.89%)',
           }}
-          className="flex justify-between mt-10 px-5 rounded-2xl py-4 gap-5"
+          className="flex justify-between gap-5 px-5 py-4 mt-10 rounded-2xl"
         >
           <motion.div
             initial={{ opacity: 0, x: -200 }}
             animate={inView3 ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col text-left justify-center gap-5 w-1/3"
+            className="flex flex-col justify-center w-1/3 gap-5 text-left"
           >
             <div className="text-4xl font-bold">
               Skip the Crew, Keep the Quality
@@ -168,7 +168,7 @@ const NextLevel = () => {
             background:
               'linear-gradient(148deg, rgba(50, 124, 254, 0.60) 28.69%, rgba(255, 255, 255, 0.60) 111.89%)',
           }}
-          className="flex mt-10 justify-between px-5 rounded-2xl py-4 gap-5 "
+          className="flex justify-between gap-5 px-5 py-4 mt-10 rounded-2xl "
         >
           <motion.div
             initial={{ opacity: 0, x: -200 }}
@@ -189,7 +189,7 @@ const NextLevel = () => {
             initial={{ opacity: 0, x: 200 }}
             animate={inView4 ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="flex flex-col text-left justify-center gap-5 w-1/3"
+            className="flex flex-col justify-center w-1/3 gap-5 text-left"
           >
             <div className="text-4xl font-bold">
               Ready for Social and Search
@@ -214,13 +214,13 @@ const NextLevel = () => {
             background:
               'linear-gradient(148deg, rgba(50, 124, 254, 0.60) 28.69%, rgba(255, 255, 255, 0.60) 111.89%)',
           }}
-          className="flex justify-between mt-10 px-5 rounded-2xl py-4 gap-5"
+          className="flex justify-between gap-5 px-5 py-4 mt-10 rounded-2xl"
         >
           <motion.div
             initial={{ opacity: 0, x: -200 }}
             animate={inView5 ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col text-left justify-center gap-5 w-1/3"
+            className="flex flex-col justify-center w-1/3 gap-5 text-left"
           >
             <div className="text-4xl font-bold">
               From Text to Motion Picture

@@ -4,10 +4,18 @@ import TryOutOur from '../../components/scriptToVideo/TryOutOur'
 import WhyChoose from '../../components/scriptToVideo/WhyChoose'
 import TrustedByCreators from '../../components/trustedByCreators/TrustedByCreators'
 import WantToKnowMore from '../../components/wantToKnowMore/WantToKnowMore'
+import heroBg from "../../assets/herosectionImages/videoclipherobg.png";
 
 const ScriptToVideo = () => {
   return (
-    <div>
+    <div 
+     style={{
+        backgroundImage: `url(${heroBg})`,
+        backgroundPosition: "top", 
+        backgroundRepeat: "no-repeat", 
+        // backgroundSize: "cover", 
+      }}
+    >
       <ScriptToVideoHeroSection />
       <WhyChoose />
       <NextLevel />

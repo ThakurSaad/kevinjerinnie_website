@@ -9,17 +9,25 @@ const Navbar = () => {
   const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const getLinkClass = (path) =>
-    location.pathname === path ? 'text-[#1AC5FE]' : ''
+  // Check if we are inside MainLayout (example: homepage "/")
+  const isMainLayout = location.pathname === '/' // adjust if needed
+
+  const getLinkClass = (path) => {
+    if (location.pathname === path) {
+      return 'text-[#1AC5FE]' // active link
+    }
+    return isMainLayout ? 'text-white' : 'text-black' // default based on layout
+  }
 
   return (
-    <div className="responsive-base-width relative z-20">
-      <div className="flex justify-between items-center py-4 relative">
+    <div className="relative z-20 responsive-base-width">
+      <div className="relative flex items-center justify-between py-4">
         <Link to={'/'}>
           <img src={logo} alt="logo" className="w-32 sm:w-40" />
         </Link>
 
-        <div className="hidden lg:flex gap-10 items-center font-poppins ">
+        {/* Desktop Menu */}
+        <div className="items-center hidden gap-10 lg:flex font-poppins">
           <Link
             to={'/'}
             className={`hover:text-[#1AC5FE] ${getLinkClass('/')}`}
@@ -30,9 +38,7 @@ const Navbar = () => {
           <Dropdown
             menu={{ items: featuresList }}
             placement="bottomCenter"
-            className={`hover:text-[#1AC5FE] text-white ${getLinkClass(
-              '/features'
-            )}`}
+            className={`hover:text-[#1AC5FE] ${getLinkClass('/features')}`}
           >
             <a onClick={(e) => e.preventDefault()} className="cursor-pointer">
               <Space>
@@ -44,18 +50,19 @@ const Navbar = () => {
 
           <Link
             to={'/pricing'}
-            className={`hover:text-[#1AC5FE] text-white ${getLinkClass(
-              '/pricing'
-            )}`}
+            className={`hover:text-[#1AC5FE] ${getLinkClass('/pricing')}`}
           >
             Pricing
           </Link>
         </div>
 
-        <div className="hidden lg:flex gap-7 items-center">
+        {/* Desktop Auth Buttons */}
+        <div className="items-center hidden lg:flex gap-7">
           <Link
             to={'/signup'}
-            className="border border-[#1AC5FE]   hover:text-[#1AC5FE] text-white rounded-md py-2 px-7"
+            className={`border border-[#1AC5FE] hover:text-[#1AC5FE] rounded-md py-2 px-7 ${
+              isMainLayout ? 'text-white' : 'text-black'
+            }`}
           >
             Sign Up
           </Link>
@@ -67,73 +74,10 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* <div className="flex lg:hidden hover:text-[#1AC5FE]">
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <CloseOutlined /> : <MenuOutlined />}
-          </button>
-        </div>
-
-        <div
-          className={`fixed top-0 left-0 h-full w-64 bg-gray-800   !z-[999] transform ${
-            isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-          } transition-transform duration-300 ease-in-out shadow-lg p-6`}
-        >
-          <div className="flex flex-col gap-6 mt-10 font-poppins text-lg">
-            <Link
-              to="/"
-              className={`hover:text-[#1AC5FE] ${getLinkClass('/')}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Dropdown
-              menu={{ items: featuresList }}
-              placement="bottomLeft"
-              className="hover:text-[#1AC5FE] "
-            >
-              <a onClick={(e) => e.preventDefault()} className="cursor-pointer">
-                <Space>
-                  Features
-                  <DownOutlined />
-                </Space>
-              </a>
-            </Dropdown>
-            <Link
-              to="/contact-us"
-              className={`hover:text-[#1AC5FE] ${getLinkClass('/contact-us')}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact Us
-            </Link>
-
-            <Link
-              to="/pricing"
-              onClick={() => setIsMenuOpen(false)}
-              className={`hover:text-[#1AC5FE] ${getLinkClass('/pricing')}`}
-            >
-              Pricing
-            </Link>
-
-            <Link
-              to="/signup"
-              onClick={() => setIsMenuOpen(false)}
-              className="border border-[#1AC5FE] rounded-md py-2 px-4 text-center"
-            >
-              Sign Up
-            </Link>
-            <Link
-              to="/login"
-              onClick={() => setIsMenuOpen(false)}
-              className="rounded-md py-2 px-4 bg-gradient-to-r from-[#094559] to-[#1AC5FE] text-white text-center"
-            >
-              Sign In
-            </Link>
-          </div>
-        </div> */}
-
+        {/* Mobile menu overlay */}
         {isMenuOpen && (
           <div
-            className="fixed inset-0 bg-black opacity-50 z-40 "
+            className="fixed inset-0 z-40 bg-black opacity-50"
             onClick={() => setIsMenuOpen(false)}
           ></div>
         )}

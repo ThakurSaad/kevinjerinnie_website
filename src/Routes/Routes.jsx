@@ -9,6 +9,8 @@ import AiVideoClip from "../Pages/aiVideoClip/aiVideoClip";
 import AIImageGenerator from "../Pages/aiImageGenerator/AIImageGenerator";
 import TextToVideo from "../Pages/textToVideo/TextToVideo";
 import AutoCaption from "../Pages/autoCaption/AutoCaption";
+import ImageToVideo from "../Pages/imageToVideo/ImageToVideo";
+import RealisticVoiceover from "../Pages/realisticVoiceover/RealisticVoiceover";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
       {
         path: "/auto-caption-and-hashtags",
         element: <AutoCaption />,
+      },
+      {
+        path: "/image-to-video",
+        element: <ImageToVideo />,
+      },
+           {
+        path: "/realistic-voiceover",
+        element: <RealisticVoiceover />,
       },
     ],
   },

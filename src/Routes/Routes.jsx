@@ -11,6 +11,11 @@ import TextToVideo from "../Pages/textToVideo/TextToVideo";
 import AutoCaption from "../Pages/autoCaption/AutoCaption";
 import ImageToVideo from "../Pages/imageToVideo/ImageToVideo";
 import RealisticVoiceover from "../Pages/realisticVoiceover/RealisticVoiceover";
+import AutoVideoEditing from "../Pages/autoVideoEditing/AutoVideoEditing";
+import ShortsVideoEditing from "../Pages/shortsVideoEditing/ShortsVideoEditing";
+import PlatformResizing from "../Pages/platformResizing/PlatformResizing";
+import AnalyticsSeo from "../Pages/Analytics & SEO Tools/AnalyticsSeo";
+import BackgroundAudio from "../Pages/BackgroundAudio/BackgroundAudio";
 
 const router = createBrowserRouter([
   {
@@ -54,10 +59,31 @@ const router = createBrowserRouter([
         path: "/image-to-video",
         element: <ImageToVideo />,
       },
-           {
+      {
         path: "/realistic-voiceover",
         element: <RealisticVoiceover />,
       },
+      {
+        path: "/auto-video-editing",
+        element: <AutoVideoEditing />,
+      },
+      {
+        path: "/shorts-video-editing",
+        element: <ShortsVideoEditing />,
+      },
+        {
+        path: "/platform-resizing",
+        element: <PlatformResizing />,
+      },
+            {
+        path: "/analytics-and-seo-tools",
+        element: <AnalyticsSeo />,
+      },
+               {
+        path: "/background-audio",
+        element: <BackgroundAudio />,
+      },
+
     ],
   },
 ]);

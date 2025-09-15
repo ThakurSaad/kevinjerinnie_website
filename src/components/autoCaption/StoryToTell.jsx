@@ -9,9 +9,9 @@ const StoryToTell = () => {
       <div className="text-5xl font-bold ">
        For anyone with a  <span className="text-[#327CFE]">story to tell</span> 
       </div>
-      <div className="grid grid-cols-2 mt-5">
+      <div className="">
         <section
-          className="grid gap-5 grid-row-2"
+          className="flex gap-6"
           direction="left"
           cascade
           triggerOnce
@@ -20,7 +20,7 @@ const StoryToTell = () => {
             src={v1}
             loop
             muted
-            className="w-full rounded-lg flex-1 h-[400px] cursor-pointer object-cover object-center"
+            className="w-1/2 rounded-lg flex-1 h-[400px] cursor-pointer object-cover object-center"
             onMouseEnter={(e) => e.target.play()}
             onMouseLeave={(e) => e.target.pause()}
           />
@@ -28,14 +28,14 @@ const StoryToTell = () => {
             src={v2}
             loop
             muted
-            className="w-full rounded-lg flex-1 h-[400px] cursor-pointer object-cover object-center"
+            className="w-1/2 rounded-lg flex-1 h-[400px] cursor-pointer object-cover object-center"
             onMouseEnter={(e) => e.target.play()}
             onMouseLeave={(e) => e.target.pause()}
           />
         </section >
 
 
-        <section className="">
+        <section className="mt-6">
           <video
             src={v5}
             loop

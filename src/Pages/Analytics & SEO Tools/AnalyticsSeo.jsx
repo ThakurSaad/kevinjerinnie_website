@@ -4,7 +4,6 @@ import FacelessAIVideoMarketing from '../../components/AnalyticsSeoTools/Faceles
 import Analytics from '../../components/AnalyticsSeoTools/Analytics'
 import TrustedByCreators from '../../components/trustedByCreators/TrustedByCreators'
 import WantToKnowMore from '../../components/wantToKnowMore/WantToKnowMore'
-
 const AnalyticsSeo = () => {
   return (
     <div className=' bg-gradient-to-r from-blue-50 to-white'>

@@ -6,6 +6,13 @@
 @tailwind utilities;
 
 
+.subtract-width {
+    width: calc(100% - 18rem);
+  }
+
+
+
+
 body {
   font-family: 'Roboto', sans-serif !important;
   scrollbar-width: none;

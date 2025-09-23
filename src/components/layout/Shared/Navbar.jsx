@@ -59,7 +59,7 @@ const Navbar = () => {
         {/* Desktop Auth Buttons */}
         <div className="items-center hidden lg:flex gap-7">
           <Link
-            to={'/signup'}
+            to={'/dashboard/sign-up'}
             className={`border border-[#1AC5FE] hover:text-[#1AC5FE] rounded-md py-2 px-7 ${
               isMainLayout ? 'text-white' : 'text-black'
             }`}

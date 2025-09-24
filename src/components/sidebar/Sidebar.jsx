@@ -8,7 +8,7 @@ import {
   MdKeyboardVoice,
   MdRecordVoiceOver,
 } from "react-icons/md";
-import { FaMusic } from "react-icons/fa";
+import { FaMusic, FaRegQuestionCircle } from "react-icons/fa";
 
 import brandlogo from "../../assets/image/logo.png";
 import {
@@ -51,11 +51,7 @@ const Sidebar = ({ closeDrawer }) => {
       label: "AI Caption Generator",
       Link: "/dashboard/ai-caption-generator",
     },
-    {
-      icon: <PiFilmStripLight className="w-5 h-5" />,
-      label: "AI Video Clip",
-      Link: "/dashboard/ai-video-clip",
-    },
+
     {
       icon: <IoImageSharp className="w-5 h-5" />,
       label: "AI Image Generator",
@@ -109,11 +105,12 @@ const Sidebar = ({ closeDrawer }) => {
       label: "Background Audio",
       Link: "/dashboard/background-audio",
     },
-    {
-      icon: <MdContactSupport className="w-5 h-5" />,
+        {
+      icon: <FaRegQuestionCircle className="w-5 h-5" />,
       label: "Chatbot Support",
       Link: "/dashboard/chatbot-support",
     },
+
   ];
 
   const filterMenuItems = (items) => {

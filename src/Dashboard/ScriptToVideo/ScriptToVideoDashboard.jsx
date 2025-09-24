@@ -85,7 +85,7 @@ const ScriptToVideoDashboard = () => {
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
                   rows={5}
-                  className="w-full resize-none rounded-xl  ring-1 ring-white/10 focus:ring-2 focus:ring-blue-400 outline-none p-4 text-[15px] placeholder-white/50"
+                  className="w-full resize-none rounded-xl  bg-black outline-none p-4 text-[15px] "
                   placeholder="Describe your scene..."
                 />
 

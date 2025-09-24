@@ -36,6 +36,8 @@ import PlatformResizingDashboard from "../Dashboard/PlatformResizing/PlatformRes
 import BackgroundAudioDashboard from "../Dashboard/BackgroundAudio/BackgroundAudioDashboard";
 import AutoVideoEditingDashboard from "../Dashboard/AutoVideoEditing/AutoVideoEditingDashboard";
 import AutoVideoEditing from "../Pages/autoVideoEditing/AutoVideoEditing";
+import ChatbotSupport from "../Dashboard/ChatbotSupport/ChatbotSupport";
+import MainChatSupport from "../components/Chatboat/MainChatSupport";
 
 const router = createBrowserRouter([
   {
@@ -101,7 +103,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/background-audio",
-        element: <BackgroundAudio/>,
+        element: <BackgroundAudio />,
       },
     ],
   },
@@ -140,57 +142,65 @@ const router = createBrowserRouter([
             element: <ScriptToVideoDashboard />,
           },
           {
-            path: "text-to-video", // Relative path to /dashboard/text-to-video
+            path: "text-to-video",
             element: <TextToVideoDashboard />,
           },
           {
-            path: "image-to-video", // Relative path to /dashboard/image-to-video
+            path: "image-to-video",
             element: <ImageToVideoDashboard />,
           },
           {
-            path: "ai-caption-generator", // Relative path to /dashboard/ai-caption-generator
+            path: "ai-caption-generator",
             element: <AICaptionGenerator />,
           },
           {
-            path: "ai-video-generator", // Relative path to /dashboard/ai-video-generator
+            path: "ai-video-generator",
             element: <AIVideoClipGenerator />,
           },
           {
-            path: "analytics-seo-tools", // Relative path to /dashboard/analytics-seo-tools
+            path: "analytics-seo-tools",
             element: <AnalyticsSeoTools />,
           },
           {
-            path: "ai-image-generator", // Relative path to /dashboard/ai-image-generator
+            path: "ai-image-generator",
             element: <AIImageGeneratorDashboard />,
           },
           {
-            path: "text-to-video-generator", // Relative path to /dashboard/ai-image-generator
+            path: "text-to-video-generator",
             element: <TextToVideoGenerator />,
           },
           {
-            path: "shorts-video-editor", // Relative path to /dashboard/ai-image-generator
+            path: "shorts-video-editor",
             element: <ShortsVideoEditorDashboard />,
           },
-                    {
-            path: "platform-resizing", // Relative path to /dashboard/ai-image-generator
-            element: <PlatformResizingDashboard/>,
+          {
+            path: "platform-resizing",
+            element: <PlatformResizingDashboard />,
           },
 
           {
-            path: "auto-caption-hashtags", // Relative path to /dashboard/auto-caption-hashtags
+            path: "auto-caption-hashtags",
             element: <AutoCaptionHashtags />,
           },
           {
-            path: "realistic-voiceover", // Relative path to /dashboard/realistic-voiceover
+            path: "realistic-voiceover",
             element: <RealisticVoiceovers />,
           },
-                    {
+          {
             path: "background-audio",
             element: <BackgroundAudioDashboard />,
           },
           {
-            path: "auto-video-editing", // Relative path to /dashboard/auto-video-editing
+            path: "auto-video-editing",
             element: <AutoVideoEditingDashboard />,
+          },
+          {
+            path: "chatbot-support",
+            element: <ChatbotSupport />,
+          },
+            {
+            path: "ai-chatbot-support",
+            element: <MainChatSupport />,
           },
         ],
       },

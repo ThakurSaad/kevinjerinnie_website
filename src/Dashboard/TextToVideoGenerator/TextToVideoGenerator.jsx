@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import { Play, Check } from "lucide-react";
+import image1 from "../../assets/image/small/create.png"
+import image2 from "../../assets/image/small/makeex.png"
+import image3 from "../../assets/image/small/create.png"
+import image4 from "../../assets/image/small/usemy.png"
+import image5 from "../../assets/image/small/make.png"
+import image6 from "../../assets/image/small/social.png"
+import image7 from "../../assets/image/small/reel.png"
+import image8 from "../../assets/image/small/multilanguage.png"
 
 const TextToVideoGenerator =()=> {
   const [prompt, setPrompt] = useState("");
@@ -35,16 +43,16 @@ const TextToVideoGenerator =()=> {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white antialiased">
-      <div className="max-w-6xl mx-auto px-4 md:px-6 py-6">
+    <div className="min-h-screen mt-20 antialiased text-white bg-black">
+      <div className="px-4 py-6 mx-auto md:px-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <div className="font-semibold tracking-wide text-lg">247WEB.AI</div>
-          <h1 className="text-2xl md:text-4xl font-extrabold">Text‑to‑Video Generator</h1>
+          <div className="text-lg font-semibold tracking-wide">247WEB.AI</div>
+          <h1 className="text-2xl font-extrabold md:text-4xl">Text‑to‑Video Generator</h1>
           <div className="w-24" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
           {/* Left: Prompt + options */}
           <div>
             <div className="rounded-2xl ring-1 ring-white/10 bg-[#0B1220] p-4">
@@ -55,11 +63,11 @@ const TextToVideoGenerator =()=> {
                 placeholder={
                   "Give me a topic, premise and detailed instructions in any language\n\n or drag & drop your script"
                 }
-                className="w-full bg-[#0E1A3D] ring-1 ring-white/10 rounded-xl p-4 outline-none placeholder:text-cyan-300/70 text-cyan-300"
+                className="w-full bg-[#0E1A3D] rounded-xl p-4 outline-none  text-cyan-300"
               />
 
               {/* Options */}
-              <div className="mt-4 grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3 mt-4">
                 <Toggle label="AI Rewrite" checked={opts.aiRewrite} onClick={() => toggle("aiRewrite")} />
                 <Toggle label="Smart Scene" checked={opts.smartScene} onClick={() => toggle("smartScene")} />
                 <Toggle label="Brand Colors" checked={opts.brandColors} onClick={() => toggle("brandColors")} />
@@ -81,13 +89,13 @@ const TextToVideoGenerator =()=> {
           {/* Right: Preview */}
           <div>
             <div className="rounded-2xl ring-1 ring-white/10 bg-[#0B1220] p-4 h-full">
-              <div className="h-60 rounded-xl bg-black grid place-items-center ring-1 ring-white/10">
-                <button className="inline-flex items-center justify-center h-14 w-14 rounded-full bg-white/10 ring-1 ring-white/20">
-                  <Play className="h-6 w-6" />
+              <div className="grid bg-black h-60 rounded-xl place-items-center ring-1 ring-white/10">
+                <button className="inline-flex items-center justify-center rounded-full h-14 w-14 bg-white/10 ring-1 ring-white/20">
+                  <Play className="w-6 h-6" />
                 </button>
               </div>
               <div className="mt-6">
-                <div className="h-2 rounded-full bg-white/10 overflow-hidden">
+                <div className="h-2 overflow-hidden rounded-full bg-white/10">
                   <div className="h-full bg-white/70" style={{ width: `${progress * 100}%` }} />
                 </div>
               </div>
@@ -97,8 +105,8 @@ const TextToVideoGenerator =()=> {
 
         {/* Video Types */}
         <div className="mt-8">
-          <div className="text-xs tracking-wider text-white/70 mb-3">VIDEO TYPES</div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="mb-3 text-xs tracking-wider text-white/70">VIDEO TYPES</div>
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
             {videoTypes.map((t) => (
               <button
                 key={t}
@@ -112,7 +120,7 @@ const TextToVideoGenerator =()=> {
         </div>
 
         {/* Footer Row */}
-        <div className="mt-10 grid grid-cols-2 gap-6 md:w-1/2">
+        <div className="grid grid-cols-2 gap-6 mt-10 md:w-1/2">
           <button className="flex items-center gap-2 text-white/80">
             <span className="h-7 w-7 rounded-full bg-[#0E1A3D] grid place-items-center">⚙️</span>
             Workflows

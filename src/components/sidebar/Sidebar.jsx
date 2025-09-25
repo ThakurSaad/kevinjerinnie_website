@@ -9,7 +9,6 @@ import {
   MdRecordVoiceOver,
 } from "react-icons/md";
 import { FaMusic, FaRegQuestionCircle } from "react-icons/fa";
-
 import brandlogo from "../../assets/image/logo.png";
 import {
   PiDesktopFill,
@@ -22,6 +21,15 @@ import { CgCaptions } from "react-icons/cg";
 import { BsPersonVideo2 } from "react-icons/bs";
 import { TbPhotoVideo } from "react-icons/tb";
 import { SiGoogleanalytics } from "react-icons/si";
+import  imagetovideo from "../../assets/social_logos/image-to-video-logo.png"
+import  aicaption from "../../assets/social_logos/ai-caption-logo.png"
+import  autohash from "../../assets/social_logos/auto-hasing-logo.png"
+import  realistic from "../../assets/social_logos/realistic-logo.png"
+import autoeditlogo from "../../assets/social_logos/auto-video-edit-logo.png";
+import  shortvideo from "../../assets/social_logos/short-video-logo.png"
+import platform from "../../assets/social_logos/platform-logo.png";
+
+
 
 const Sidebar = ({ closeDrawer }) => {
   const [active, setActive] = useState("Dashboard");
@@ -42,12 +50,12 @@ const Sidebar = ({ closeDrawer }) => {
       Link: "/dashboard/ai-video-generator",
     },
     {
-      icon: <TbPhotoVideo className="w-5 h-5" />,
+      icon: <img src={imagetovideo} alt="Image to Video" className="w-5 h-5" />, 
       label: "Image-to-Video",
       Link: "/dashboard/image-to-video",
     },
     {
-      icon: <PiDesktopFill className="w-5 h-5" />,
+      icon: <img src={aicaption} alt="Image to Video" className="w-5 h-5" />, 
       label: "AI Caption Generator",
       Link: "/dashboard/ai-caption-generator",
     },
@@ -63,23 +71,23 @@ const Sidebar = ({ closeDrawer }) => {
       Link: "/dashboard/text-to-video",
     },
     {
-      icon: <CgCaptions className="w-5 h-5" />,
+      icon: <img src={autohash} alt="Image to Video" className="w-5 h-5" />, 
       label: "Auto Caption & Hashtags",
       Link: "/dashboard/auto-caption-hashtags",
     },
         {
-      icon: <MdRecordVoiceOver className="w-5 h-5" />,
+      icon: <img src={realistic} alt="Image to Video" className="w-5 h-5" />, 
       label: "Realistic Voiceover",
       Link: "/dashboard/realistic-voiceover",
     },
         {
-      icon: <BsPersonVideo2 className="w-5 h-5" />,
+      icon:  <img src={autoeditlogo} alt="Image to Video" className="w-5 h-5" />, 
       label: "Auto Video Editing",
       Link: "/dashboard/auto-video-editing",
     },
 
             {
-      icon: <MdKeyboardVoice className="w-5 h-5" />,
+      icon: <img src={shortvideo} alt="Image to Video" className="w-5 h-5" />, 
       label: "Shorts Video Editor",
       Link: "/dashboard/shorts-video-editor",
     },
@@ -89,7 +97,7 @@ const Sidebar = ({ closeDrawer }) => {
       Link: "/dashboard/text-to-video-generator",
     },
                 {
-      icon: <MdKeyboardVoice className="w-5 h-5" />,
+      icon: <img src={platform} alt="Image to Video" className="w-5 h-5" />, 
       label: "PlatformResizing",
       Link: "/dashboard/platform-resizing",
     },
@@ -162,14 +170,12 @@ const Sidebar = ({ closeDrawer }) => {
               }
             >
               <Link to={item.Link} className="flex items-center w-full gap-3">
-                <span
-                  className={`${
-                    active === item.label ? "text-blue-500" : "text-white"
-                  }`}
-                >
+                <span>
                   {item.icon}
                 </span>
-                <p>{item.label}</p>
+                <p className={`${
+                    active === item.label ? "text-blue-500" : "text-white"
+                  }`}>{item.label}</p>
                 {item.isDropdown && (
                   <BiChevronDown
                     className={`${

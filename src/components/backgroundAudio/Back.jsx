@@ -5,6 +5,7 @@ import v2 from "../../assets/kevin videos/auto video editing/first/2edit.png";
 import v3 from "../../assets/kevin videos/auto video editing/first/3edit.png";
 import v4 from "../../assets/kevin videos/auto video editing/first/4edit.mp4";
 import v5 from "../../assets/kevin videos/auto video editing/first/5edit.mp4";
+
 import { Link } from "react-router-dom";
 
 const Back = () => {
@@ -155,7 +156,6 @@ const Back = () => {
             </Link>
           </motion.div>
         </section>
-
         {/* Section 5 */}
         <section
           ref={ref5}
@@ -178,7 +178,6 @@ const Back = () => {
               </span>
             </Link>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, x: 200 }}
             animate={inView5 ? { opacity: 1, x: 0 } : {}}

@@ -15,16 +15,18 @@ const Chat = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-            className="py-[30px] "
+            className="py-[30px]  "
           >
-            <Link to={"/dashboard/ai-chatbot-support"}>
+          <div className="flex justify-end mr-16">
+              <Link to={"/dashboard/ai-chatbot-support"}>
               <button
-              className="px-5  py-3 rounded-md font-bold text-white 
+              className="px-5   py-3 rounded-md font-bold text-white 
                bg-[linear-gradient(178deg,rgba(50,124,254,1)_2%,rgba(34,68,119,1)_100%)]"
             >
               Chat
             </button>
             </Link>
+          </div>
           </div>
         </div>
       </div>

@@ -67,7 +67,7 @@ const TextToVideoDashboard = () => {
                   rows={5}
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
-                  className="w-full resize-none rounded-xl  ring-1 ring-white/10 focus:ring-2 focus:ring-blue-400 outline-none p-4 text-[15px]"
+                  className="w-full p-4 bg-black outline-none resize-none rounded-xl ring-1 ring-white/10 focus:ring-2 focus:ring-blue-400 "
                 />
 
                 {/* Upload */}

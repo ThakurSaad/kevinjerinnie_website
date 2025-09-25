@@ -13,7 +13,7 @@ const BackgroundAudio = () => {
   ];
 
   return (
-    <div className="min-h-screen p-8 font-sans text-white bg-black">
+    <div className="min-h-screen p-8 mt-20 font-sans text-white bg-black">
       {/* Header */}
       <div className="flex items-center justify-between mb-8 text-2xl font-bold">
         <span>247WEB.AI</span>
@@ -35,36 +35,43 @@ const BackgroundAudio = () => {
         </div>
       </div>
 
-      {/* Genre + Mood */}
-      <div className="flex flex-col items-center justify-between gap-6 p-6 mb-8 bg-gradient-to-r from-indigo-900 to-blue-900 rounded-xl md:flex-row">
-        <div>
-          <label className="block mb-1 text-sm text-gray-300">Genre</label>
-          <select
-            value={genre}
-            onChange={(e) => setGenre(e.target.value)}
-            className="px-4 py-2 text-white bg-black border border-gray-700 rounded-md focus:outline-none"
-          >
-            <option>Ambient</option>
-            <option>Chill</option>
-            <option>Classical</option>
-            <option>Electronic</option>
-          </select>
-        </div>
-
-        <div>
-          <label className="block mb-1 text-sm text-gray-300">Mood</label>
-          <select
-            value={mood}
-            onChange={(e) => setMood(e.target.value)}
-            className="px-4 py-2 text-white bg-black border border-gray-700 rounded-md focus:outline-none"
-          >
-            <option>Calm</option>
-            <option>Happy</option>
-            <option>Energetic</option>
-            <option>Sad</option>
-          </select>
-        </div>
+      {/*=========================== Genre + Mood ==========================*/}
+      <div 
+      className="flex flex-col items-center justify-between gap-6 p-6 mb-8 rounded-xl md:flex-row"
+      style={{ 
+        backgroundImage: `url(${audiobg})`, 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center'
+      }}
+    >
+      <div>
+        <label className="block mb-1 text-sm text-gray-300">Genre</label>
+        <select
+          value={genre}
+          onChange={(e) => setGenre(e.target.value)}
+          className="px-4 py-2 text-white bg-black border border-gray-700 rounded-md focus:outline-none"
+        >
+          <option>Ambient</option>
+          <option>Chill</option>
+          <option>Classical</option>
+          <option>Electronic</option>
+        </select>
       </div>
+
+      <div>
+        <label className="block mb-1 text-sm text-gray-300">Mood</label>
+        <select
+          value={mood}
+          onChange={(e) => setMood(e.target.value)}
+          className="px-4 py-2 text-white bg-black border border-gray-700 rounded-md focus:outline-none"
+        >
+          <option>Calm</option>
+          <option>Happy</option>
+          <option>Energetic</option>
+          <option>Sad</option>
+        </select>
+      </div>
+    </div>
 
       {/* Track List */}
       <div className="space-y-4">

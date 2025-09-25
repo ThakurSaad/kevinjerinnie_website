@@ -7,9 +7,12 @@ import {
   Check,
   Monitor,
 } from "lucide-react";
+import image1 from "../../assets/image/aiimage.png";
+import image2 from "../../assets/image/aiimage2.png";
+import image3 from "../../assets/image/aiimage3.png";
+import image4 from "../../assets/image/aiimage4.png";
 
-
-const AIImageGeneratorDashboard =()=> {
+const AIImageGeneratorDashboard = () => {
   const [prompt, setPrompt] = useState("");
   const [useAssistant, setUseAssistant] = useState(true);
   const [model, setModel] = useState("Anime");
@@ -17,11 +20,8 @@ const AIImageGeneratorDashboard =()=> {
   const [count, setCount] = useState(1);
   const [isGenerating, setIsGenerating] = useState(false);
 
-  const placeholder = "/mnt/data/7.png";
-  const samples = useMemo(
-    () => [placeholder, placeholder, placeholder, placeholder],
-    []
-  );
+  const placeholder = image1; // Default sample image
+  const samples = useMemo(() => [image1, image2, image3, image4], []); // Replace with your imported images
   const [idx, setIdx] = useState(0);
 
   const charCount = prompt.length;
@@ -29,6 +29,7 @@ const AIImageGeneratorDashboard =()=> {
   function prev() {
     setIdx((i) => (i - 1 + samples.length) % samples.length);
   }
+
   function next() {
     setIdx((i) => (i + 1) % samples.length);
   }
@@ -110,13 +111,7 @@ const AIImageGeneratorDashboard =()=> {
             <div className="rounded-2xl bg-[#0B1220] ring-1 ring-white/10 p-4">
               <div className="mb-2 text-sm text-white/80">Aspect Ratio</div>
               <div className="flex flex-wrap gap-2">
-                {[
-                  { label: "1:1" },
-                  { label: "16:9" },
-                  { label: "3:2" },
-                  { label: "1:6:9" },
-                  { label: "4:3/4:6" },
-                ].map((r) => (
+                {[{ label: "1:1" }, { label: "16:9" }, { label: "3:2" }, { label: "1:6:9" }, { label: "4:3/4:6" }].map((r) => (
                   <button
                     key={r.label}
                     onClick={() => setRatio(r.label)}
@@ -151,7 +146,7 @@ const AIImageGeneratorDashboard =()=> {
 
           {/* Right area */}
           <section className="lg:col-span-2">
-            <div className="rounded-2xl bg-[#0B1220] ring-1 ring-white/10 p-4">
+            <div className="p-4 rounded-2xl ring-1 ring-white/10">
               <div className="mb-4 font-medium text-white/90">Sample Image</div>
 
               {/* Carousel */}
@@ -165,7 +160,7 @@ const AIImageGeneratorDashboard =()=> {
                   <button onClick={next} className="absolute grid -translate-y-1/2 rounded-full right-2 top-1/2 h-9 w-9 bg-black/60 place-items-center ring-1 ring-white/20">
                     <ChevronRight className="w-5 h-5" />
                   </button>
-                  <div className="absolute left-2 bottom-2 text-sm bg-black/50 px-2 py-0.5 rounded-md">
+                  <div className="absolute left-2 bottom-2 text-sm bg-black px-2 py-0.5 rounded-md">
                     {idx + 1}/{samples.length}
                   </div>
                 </div>
@@ -189,16 +184,9 @@ const AIImageGeneratorDashboard =()=> {
                 </div>
               </div>
 
-              {/* Model tags under carousel */}
-              <div className="flex items-center gap-3 mt-3">
-                <div className="h-9 rounded-xl bg-[#0E1A3D] ring-1 ring-white/10 px-3 grid place-items-center text-sm">Anime</div>
-                <div className="h-9 rounded-xl bg-[#0E1A3D] ring-1 ring-white/10 px-3 grid place-items-center text-sm">FLUX</div>
-                <div className="h-9 rounded-xl bg-[#0E1A3D] ring-1 ring-white/10 px-3 grid place-items-center text-sm">Portrait</div>
-                <div className="h-9 rounded-xl bg-[#0E1A3D] ring-1 ring-white/10 px-3 grid place-items-center text-sm">Cat</div>
-              </div>
 
               {/* Generate Button */}
-              <div className="mt-6">
+              <div className="flex justify-center mt-6">
                 <button
                   onClick={handleGenerate}
                   disabled={isGenerating}
@@ -213,6 +201,6 @@ const AIImageGeneratorDashboard =()=> {
       </div>
     </div>
   );
-}
+};
 
 export default AIImageGeneratorDashboard;

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Play, Upload, Search } from "lucide-react";
+import audiobg from "../../assets/image/audiobg.png"
+
 
 const BackgroundAudioDashboard = () => {
   const [genre, setGenre] = useState("Ambient");
@@ -13,7 +15,7 @@ const BackgroundAudioDashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen p-8 font-sans text-white bg-black">
+    <div className="min-h-screen p-8 mt-20 font-sans text-white bg-black">
       {/* Header */}
       <div className="flex items-center justify-between mb-8 text-2xl font-bold">
         <span>247WEB.AI</span>
@@ -36,7 +38,14 @@ const BackgroundAudioDashboard = () => {
       </div>
 
       {/* Genre + Mood */}
-      <div className="flex flex-col items-center justify-between gap-6 p-6 mb-8 bg-gradient-to-r from-indigo-900 to-blue-900 rounded-xl md:flex-row">
+      <div className="flex flex-col items-center justify-between gap-6 p-6 pt-8 mb-8 pb-36 bg-gradient-to-r from-indigo-900 to-blue-900 rounded-xl md:flex-row"
+       style={{ 
+        backgroundImage: `url(${audiobg})`, 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center'
+      }}
+      
+      >
         <div>
           <label className="block mb-1 text-sm text-gray-300">Genre</label>
           <select

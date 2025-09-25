@@ -8,7 +8,7 @@ import {
   MdKeyboardVoice,
   MdRecordVoiceOver,
 } from "react-icons/md";
-import { FaMusic, FaRegQuestionCircle } from "react-icons/fa";
+import { FaMusic, FaPlay, FaRegQuestionCircle } from "react-icons/fa";
 import brandlogo from "../../assets/image/logo.png";
 import {
   PiDesktopFill,
@@ -28,6 +28,7 @@ import  realistic from "../../assets/social_logos/realistic-logo.png"
 import autoeditlogo from "../../assets/social_logos/auto-video-edit-logo.png";
 import  shortvideo from "../../assets/social_logos/short-video-logo.png"
 import platform from "../../assets/social_logos/platform-logo.png";
+import textvideo from "../../assets/social_logos/text-to-video-logo.png";
 
 
 
@@ -92,7 +93,7 @@ const Sidebar = ({ closeDrawer }) => {
       Link: "/dashboard/shorts-video-editor",
     },
             {
-      icon: <MdKeyboardVoice className="w-5 h-5" />,
+      icon: <FaPlay/>, 
       label: "Text-to-Video-generator",
       Link: "/dashboard/text-to-video-generator",
     },

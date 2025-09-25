@@ -67,7 +67,7 @@ const Navbar = () => {
             Sign Up
           </Link>
           <Link
-            to={'/login'}
+            to={'/dashboard/sign-up'}
             className="rounded-md py-2 px-7 bg-[#327CFE] hover:bg-[#327dfed3] text-white"
           >
             Sign In

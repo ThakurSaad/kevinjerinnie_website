@@ -5,7 +5,7 @@ const Features = () => {
     {
       key: 'signup',
       content: (
-        <Link to="/signup">
+        <Link to="/dashboard/sign-up">
           <div>
             <span className="text-semibold border border-[#1AC5FE] text-[#1AC5FE]  px-6 py-3 font-roboto rounded-md bg-white font-bold mb-4">
               Sign Up
@@ -17,7 +17,7 @@ const Features = () => {
     {
       key: 'signin',
       content: (
-        <Link to="/login">
+        <Link to="/dashboard/sign-up">
           <div>
             <span className="text-semibold   bg-[#1AC5FE] px-6 py-3 font-roboto rounded-md  text-black mb-4">
               Sign In
@@ -59,16 +59,16 @@ const Features = () => {
         </Link>
       ),
     },
-    {
-      key: 'ai-caption-generator',
-      content: (
-        <Link to="/ai-caption-generator">
-          <div className="text-semibold font-roboto font-semibold hover:text-[#1AC5FE] py-2">
-            AI Caption Generator
-          </div>
-        </Link>
-      ),
-    },
+    // {
+    //   key: 'ai-caption-generator',
+    //   content: (
+    //     <Link to="/ai-caption-generator">
+    //       <div className="text-semibold font-roboto font-semibold hover:text-[#1AC5FE] py-2">
+    //         AI Caption Generator
+    //       </div>
+    //     </Link>
+    //   ),
+    // },
     {
       key: 'ai-video-clip',
       content: (

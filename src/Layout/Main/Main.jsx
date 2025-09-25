@@ -84,9 +84,11 @@ const MainLayout = () => {
             <div className="items-center justify-center hidden w-10 h-10 overflow-hidden bg-[#030c2b] rounded-full md:flex"></div>
             <div className="hidden text-right gap-x-5 md:flex ">
               <div className="flex items-center gap-x-2">
+                <Link to={"/pricing"}>
                 <div className="flex items-center justify-center w-10 h-10 text-white bg-[#FFC107] rounded-full ">
                   <TbCrown size={35} />
                 </div>
+                </Link>
                 <h3 className="text-lg font-bold text-white">Upgrade</h3>
               </div>
               {/* Profile Button */}

@@ -49,24 +49,24 @@ const HeroPage = () => {
   const navigate = useNavigate()
 
   const handleGetStarted = () => {
-    navigate('/signup')
+    navigate('/dashboard/sign-up')
   }
 
   return (
-    <section className=" h-screen overflow-hidden ">
+    <section className="h-screen overflow-hidden ">
       <div className="absolute inset-0 z-1">
         <video
           src={heroVideo}
           autoPlay
           loop
           muted
-          className="w-full h-full object-cover object-center"
+          className="object-cover object-center w-full h-full"
         />
       </div>
 
-      <div className="absolute inset-0 bg-opacity-40 z-10"></div>
+      <div className="absolute inset-0 z-10 bg-opacity-40"></div>
 
-      <div className="relative z-1 h-full">
+      <div className="relative h-full z-1">
         <div className="max-w-6xl mx-auto h-[72vh] flex flex-col justify-center">
           <div className="text-6xl font-bold text-center max-w-[900px] w-full mx-auto text-white">
             Turn Your Ideas Into Viral Videos Instantly - with{' '}
@@ -81,7 +81,7 @@ const HeroPage = () => {
             trending hashtags, and background music – everything is handled
             automatically.
           </div>
-          <div className="flex justify-center z-10">
+          <div className="z-10 flex justify-center">
             <button
               onClick={handleGetStarted}
               className="border border-[#1AC5FE] py-3 px-10 rounded-full text-[#1AC5FE] hover:bg-[#1AC5FE] hover:text-black transition duration-300 ease-in-out mt-10 inline-block"
@@ -92,8 +92,8 @@ const HeroPage = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 z-10 overflow-hidden py-5">
-        <div className="animate-marquee space-x-10 w-max">
+      <div className="absolute bottom-0 left-0 right-0 z-10 py-5 overflow-hidden">
+        <div className="space-x-10 animate-marquee w-max">
           {videos.map((vid, index) => (
             <video
               key={index}
@@ -106,7 +106,7 @@ const HeroPage = () => {
           ))}
         </div>
 
-        {/* <div className="animate-marquee space-x-10 w-max">
+        {/* <div className="space-x-10 animate-marquee w-max">
           {[...Array(5)]
             .flatMap(() => photos)
             .map((img, index) => (
